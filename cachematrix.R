@@ -52,6 +52,7 @@ cacheSolve <- function(x, ...) {
    
       matrixInverse <- x$getMatrixInverse()
       
+      ## if cached inverse is available, return the cached inverse
       if(!is.null(matrixInverse)) {
          message("Retrieving Cached Data")
          return(matrixInverse)
@@ -63,7 +64,5 @@ cacheSolve <- function(x, ...) {
       
       x$setMatrixInverse(matrixInverse)
       
-      
       return(matrixInverse)
-      
 }
